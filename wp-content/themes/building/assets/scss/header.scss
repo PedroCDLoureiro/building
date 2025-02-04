@@ -1,0 +1,113 @@
+@use "variables";
+
+header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    .row-header {
+        padding: 10px 40px;
+        border-bottom: 2px solid #dedede;
+        align-items: center;
+        img {
+            width: 150px;
+        }
+        .menu-header {
+            display: flex;
+            justify-content: flex-end;
+            #nav-desk {
+                display: flex;
+                align-items: center;
+                ul {
+                    display: flex;
+                    gap: 50px;
+                    padding: 0;
+                    margin-bottom: 0;
+                    li {
+                        list-style: none;
+                        a {
+                            text-decoration: none;
+                            color: variables.$font-color;
+                            font-weight: 300;
+                            transition: all ease 0.3s;
+                            &:hover {
+                                color: variables.$primary-color;
+                            }
+                        }
+                        &.current_page_item {
+                            a {
+                                color: variables.$primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+            #menu-mobile {
+                display: none;
+                #nav-mobile {
+                    width: 0;
+                    background: variables.$secondary-font-color;
+                    position: fixed;
+                    left: -1000px;
+                    top: 0;
+                    height: 100%;
+                    padding: 30px 0;
+                    opacity: 0;
+                    z-index: -1;
+                    transition: all ease 0.3s;
+                    li {
+                        list-style: none;
+                        margin: 15px 0;
+                        a {
+                            font-size: variables.$font-size-large;
+                            color: variables.$primary-color;
+                            text-decoration: none;
+                            font-weight: 600;
+                        }
+                    }
+                    &.active {
+                        left: 0;
+                        z-index: 100;
+                        opacity: 1;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .div-search {
+            i {
+                color: variables.$primary-color;
+                border-left: 1px solid variables.$primary-color;
+                padding-left: 5px;
+                cursor: pointer;
+                transition: all ease 0.3s;
+                &:hover {
+                    color: variables.$secondary-color;
+                    border-color: variables.$secondary-color;
+                }
+            }
+            form {
+                input {
+                    width: 0;
+                    padding: 0;
+                    border: none;
+                    outline: none;
+                    border-radius: 20px;
+                    transition: width 0.3s ease, padding 0.4s ease;
+                    opacity: 0;
+                    transform: translateX(20px);
+                }
+                &.active {
+                    input {
+                        width: 100%;
+                        padding: 5px 10px;
+                        opacity: 1;
+                        transform: translateX(0);
+                        border: 1px solid #ccc;
+                    }
+                }
+            }
+        }
+    }
+}

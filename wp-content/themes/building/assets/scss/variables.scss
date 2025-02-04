@@ -1,0 +1,47 @@
+// Cores
+$primary-color: #ec0001;
+$secondary-color: #404040;
+$danger-color: #e74c3c;
+$background-color: #fff;
+$font-color: #000;
+$secondary-font-color: #fff;
+
+// Tamanhos
+$font-size-xsmall: 12px;
+$font-size-small: 14px;
+$font-size-base: 16px;
+$font-size-medium: 18px;
+$font-size-large: 20px;
+$font-size-xlarge: 26px;
+
+// Slider
+$gradient-start: rgba(0, 0, 0, 1);
+$gradient-end: rgba(0, 0, 0, 0);
+
+// Container
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1080px !important;
+        &.c-blog {
+            max-width: 900px !important;
+        }
+    }
+}
+@media (min-width: 1400px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1200px !important;
+        &.c-blog {
+            max-width: 1000px !important;
+        }
+    }
+}

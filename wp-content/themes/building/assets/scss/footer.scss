@@ -1,0 +1,109 @@
+@use "variables";
+
+#footer {
+    background-color: variables.$secondary-color;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 0 20px 0;
+    .footer-widgets {
+        margin-top: 30px;
+        .row-links {
+            border-bottom: 1px solid #606060;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            .logo {
+                width: 150px;
+                border-right: 1px solid #606060;
+                margin-right: 10px;
+            }
+            nav {
+                display: flex;
+                align-items: center;
+                width: max-content;
+                ul {
+                    display: flex;
+                    gap: 50px;
+                    padding: 0;
+                    margin-bottom: 0;
+                    li {
+                        list-style: none;
+                        a {
+                            font-size: variables.$font-size-small;
+                            text-decoration: none;
+                            color: variables.$secondary-font-color;
+                            transition: all ease 0.3s;
+                            &:hover {
+                                color: variables.$primary-color;
+                            }
+                        }
+                        &:nth-last-child(1) {
+                            a {
+                                border: 1px solid
+                                    variables.$secondary-font-color;
+                                padding: 5px 20px;
+                                border-radius: 20px;
+                                &:hover {
+                                    background-color: variables.$secondary-font-color;
+                                    color: variables.$secondary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .row-infos {
+            h4 {
+                font-size: variables.$font-size-small;
+                color: variables.$secondary-font-color;
+                margin-bottom: 10px;
+            }
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                font-size: variables.$font-size-small;
+                color: variables.$secondary-font-color !important;
+                margin: 8px 0;
+                transition: all ease 0.3s;
+                span {
+                    color: variables.$secondary-font-color;
+                    transition: all ease 0.3s;
+                }
+                i {
+                    color: variables.$secondary-font-color;
+                    font-size: variables.$font-size-large;
+                    margin-right: 8px;
+                    transition: all ease 0.3s;
+                }
+                &:hover {
+                    color: variables.$primary-color !important;
+                    span,
+                    i {
+                        color: variables.$primary-color !important;
+                    }
+                }
+            }
+            .social-icons {
+                display: flex;
+                gap: 15px;
+                padding: 0;
+                li {
+                    list-style: none;
+                    i {
+                        font-size: variables.$font-size-xlarge;
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        text-align: center;
+        font-size: 12px;
+        margin-top: 40px;
+        p {
+            color: #cecece;
+            margin-bottom: 0;
+        }
+    }
+}

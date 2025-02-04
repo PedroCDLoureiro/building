@@ -1,0 +1,24 @@
+{
+    "name": "building",
+    "version": "1.0.0",
+    "main": "gulpfile.mjs",
+    "scripts": {
+        "start": "gulp"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "type": "module",
+    "devDependencies": {
+        "browser-sync": "^3.0.3",
+        "gulp": "^5.0.0",
+        "gulp-autoprefixer": "^9.0.0",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-sass": "^5.1.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "gulp-uglify": "^3.0.2",
+        "sass": "^1.81.0"
+    }
+}

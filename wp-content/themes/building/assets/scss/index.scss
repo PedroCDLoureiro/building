@@ -1,0 +1,101 @@
+@use "variables";
+
+#incorporadora {
+    h2 {
+        font-size: variables.$font-size-base !important;
+        font-weight: 400;
+    }
+    p {
+        font-size: variables.$font-size-xlarge;
+        font-weight: 500;
+        margin: 0;
+    }
+}
+
+#portfolio {
+    .container-fluid {
+        border-bottom: 2px solid #999999;
+        margin-bottom: 20px;
+    }
+    #portfolio-posts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+    }
+}
+
+#video-institucional {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+    span {
+        display: flex;
+        margin-bottom: 10px;
+        font-size: variables.$font-size-small;
+        color: variables.$secondary-font-color;
+    }
+    h2 {
+        color: variables.$secondary-font-color;
+        &.sec-titulo {
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid variables.$secondary-font-color;
+        }
+    }
+    p {
+        color: variables.$secondary-font-color;
+    }
+}
+
+#blog-footer {
+    background-color: variables.$secondary-color;
+    margin: 0;
+    padding-top: 40px;
+    h2,
+    p {
+        color: variables.$secondary-font-color;
+    }
+    .blog-posts {
+        margin-top: 30px;
+        padding-bottom: 30px;
+        .post {
+            transition: all ease 0.3s;
+            a {
+                text-decoration: none;
+                color: variables.$secondary-font-color;
+                .post-thumbnail {
+                    margin-bottom: 10px;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                h3 {
+                    font-size: variables.$font-size-base;
+                    margin: 15px 0 10px 0;
+                }
+                p {
+                    font-size: variables.$font-size-xsmall;
+                    color: variables.$secondary-font-color;
+                    margin-bottom: 0;
+                }
+            }
+            &:nth-child(1) {
+                padding-right: 45px;
+            }
+            &:nth-child(2) {
+                padding: 0 30px;
+            }
+            &:nth-child(3) {
+                padding-left: 45px;
+            }
+            &.not-active {
+                opacity: 0.4;
+            }
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+}
